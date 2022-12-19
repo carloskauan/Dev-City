@@ -57,3 +57,19 @@ uma comunidade simples mas poderosa para devs interagir!
 
 - carloskauan -[Github](https://github.com/carloskauan)
 - Victor Eduardo Art -[Redes Sociais](https://linktr.ee/victor_eduardo_art)
+
+# Api
+## Users Endpoints
+### Estrutura
+~~~json
+{
+    "name":" ", //string
+    "email":" ", //string
+    "password":" ", //string
+    "bio":" " //string
+}
+~~~
+> Atente-se aos tipos de dados de cada campo
+### /user
+#### Post
+Este metodo
