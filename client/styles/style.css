@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+/* ====== VARIÁVEIS ====== */
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+h4 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2.8rem;
+}
+
+h5 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+h6 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+p, body {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+}
+
+.body-small {
+  font-size: 1.8rem;
+}
+
+.body-large {
+  font: 2.2rem;
+}
+
+span, .caption {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.caption-small {
+  font-size: 1.4rem;
+}
+
+.caption-large {
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+}
+
+.button-small {
+  font-size: 1.6rem;
+}
+
+.button-large {
+  font-size: 2.2rem;
+}
+
+a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.link-small {
+  font-size: 1.7rem;
+}
+
+.link-large {
+  font-size: 2.3rem;
+}
+
+label {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.label-small {
+  font-size: 1.3rem;
+}
+
+.label-large {
+  font-size: 1.9rem;
+}
+
+/* ====== BODY/HTML/ROOT ====== */
+:root {
+  font-size: 65%;
+}
+
+body {
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #1C1C1C;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ====== HEADER ====== */
+header {
+  background-color: #282828;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  color: #893FF1;
+}
+header a {
+  transition: 0.5s;
+  color: #fff;
+  margin: 0 1rem;
+}
+header a:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
+/* ====== MAIN ====== */
+main {
+  padding: 2rem;
+  margin-top: 17vh;
+}
+main h2 {
+  color: #893FF1;
+  text-align: center;
+  margin-top: 1rem;
+  margin: auto;
+  width: 40rem;
+  margin-bottom: 1.5rem;
+}
+main p {
+  text-align: center;
+  color: #893FF1;
+}
+main form {
+  background-color: #404040;
+  width: 40rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.356);
+}
+main form h2 {
+  color: #fff;
+  font-size: 3rem;
+}
+main form button {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  transition: 0.5s all;
+  color: #fff;
+  background-color: #5534ba;
+  width: 100%;
+  padding: 0.7rem;
+}
+main form button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+main form .campo {
+  display: flex;
+  flex-direction: column;
+}
+main form .campo input {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.7rem;
+  background-color: #303030;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+main form .ctr_campo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main form .ctr_campo .campo {
+  flex-direction: row;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+main form .ctr_campo .campo label {
+  margin-right: 1rem !important;
+}
+
+main.main_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====== FOOTER ====== *//*# sourceMappingURL=style.css.map */
