@@ -72,7 +72,13 @@ uma comunidade simples mas poderosa para devs interagir!
 ## Users Endpoints
 ### /user
 #### Post
+~~~go
+"/api/user"
+~~~
 Este metodo registra os dados do usuario no banco e retorna esses dados
 > Requer o JSON com os dados
 #### Get
+~~~go
+"/api/user"
+~~~
 Este metodo retorna todos os usarios registrados no banco
