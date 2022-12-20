@@ -59,6 +59,7 @@ uma comunidade simples mas poderosa para devs interagir!
 - Victor Eduardo Art -[Redes Sociais](https://linktr.ee/victor_eduardo_art)
 
 # Api
+## Users Endpoints
 ### Estrutura
 ~~~json
 {
@@ -69,7 +70,6 @@ uma comunidade simples mas poderosa para devs interagir!
 }
 ~~~
 > Atente-se aos tipos de dados de cada campo
-## Users Endpoints
 ### /user
 #### Post
 ~~~go
