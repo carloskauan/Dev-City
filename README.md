@@ -62,10 +62,10 @@ uma comunidade simples mas poderosa para devs interagir!
 ### Estrutura
 ~~~json
 {
-    "name":" ", //string
-    "email":" ", //string
-    "password":" ", //string
-    "bio":" " //string
+    "name":"string",
+    "email":"string",
+    "password":"string",
+    "bio":"string"
 }
 ~~~
 > Atente-se aos tipos de dados de cada campo
