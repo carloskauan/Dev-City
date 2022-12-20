@@ -7,6 +7,11 @@ import(
 
 func HandlerFunc(){
   app := gin.Default()
-  app.POST("/user", controllers.Register)
+
+  //Users Routes
+  app.GET("/user", controllers.GetAllUsers)
+  app.POST("/user", controllers.RegisterUser)
+  app.GET("/user/:email", controllers.SeachUserByEmail)
+
   app.Run()
 }
