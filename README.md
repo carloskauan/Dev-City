@@ -77,7 +77,7 @@ uma comunidade simples mas poderosa para devs interagir!
 ~~~
 Este metodo registra os dados do usuario no banco e retorna esses dados
 > Requer o JSON com os dados
-> 
+
 Esta etapa contem um validador de email e caso seja passado um email invalido a operação de cadastro e cancelada e e temos o seguinte retorno
 ~~~json
 {
@@ -105,10 +105,17 @@ Caso as credenciais estjam certas e retornado
     "status": true
 }
 ~~~
-Caso as credenciais estejam erradas ou o usuario não exista e retornado
+Caso o usuario estejam errado ou não exista e retornado
 ~~~json
 {
     "error":"User not found",
     "status": false
+}
+~~~
+E em caso de senha erra temos 
+~~~json
+{
+    "error":"Password don't macth",
+    "status":false
 }
 ~~~
