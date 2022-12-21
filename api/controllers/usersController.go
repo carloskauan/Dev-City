@@ -3,6 +3,7 @@ package controllers
 import(
   "fmt"
   "net/http"
+  "net/mail"
   "DevCity/api/database"
   "DevCity/api/models"
   "github.com/gin-gonic/gin"
@@ -12,23 +13,33 @@ import(
 var user models.User
 
 func RegisterUser(c *gin.Context){
+
+  // Puxando dados do usuario da requisição
   if err := c.ShouldBindJSON(&user); err != nil{
     c.JSON(http.StatusBadRequest, gin.H{
       "error": err.Error(),
     })
     return
   }
-
+  //Validação de email
+  validateEmail , _ := mail.ParseAddress(user.Email)
+  if validateEmail == nil{
+    c.JSON(http.StatusBadRequest, gin.H{
+      "error": "invalid email",
+    })
+    return
+  }
+  //Criptografando senha
   sb, err := bcrypt.GenerateFromPassword([]byte(user.Password), 10)
   if err != nil{ fmt.Println("Erro ao criptografar... ", err)}
-
   user.Password = string(sb)
-
+  //Salvando dandos no banco
   database.DB.Create(&user)
+
   c.JSON(http.StatusOK, user)
 }
 
-func SeachUserByEmail(c *gin.Context){
+func SearchUserByEmail(c *gin.Context){
   email := c.Params.ByName("email")
   database.DB.Where(&models.User{Email: email}).First(&user)
   if user.ID == 0{
