@@ -84,7 +84,7 @@ Este metodo registra os dados do usuario no banco e retorna esses dados
 Este metodo retorna todos os usarios registrados no banco
 
 ### /user/"email"/"senha"
-### Get
+#### Get
 Este metodo deve ser chamado quando uma autenticação de usuario for necessario. O metodo retorna um status com um booleano
 Exmeplo:
 ~~~
