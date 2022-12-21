@@ -86,7 +86,8 @@ Este metodo retorna todos os usarios registrados no banco
 ### /user/"email"/"senha"
 #### Get
 Este metodo deve ser chamado quando uma autenticação de usuario for necessario. O metodo retorna um status com um booleano
-Exmeplo:
+
+Exemplo:
 ~~~
 get("/user/jão12345@gmail.com/12345678")
 ~~~
