@@ -91,6 +91,12 @@ Esta etapa contem um validador de email e caso seja passado um email invalido a 
 ~~~
 Este metodo retorna todos os usarios registrados no banco
 
+### /user/"email"
+~~~
+get("/user/"email")
+~~~
+Esta rota retorna retorna os dados do usuario do email informado
+
 ### /user/"email"/"senha"
 #### Get
 Este metodo deve ser chamado quando uma autenticação de usuario for necessario. O metodo retorna um status com um booleano
