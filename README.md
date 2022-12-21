@@ -37,6 +37,9 @@ uma comunidade simples mas poderosa para devs interagir!
 - CSS
 - JAVASCRIPT
 - Nodejs
+- Golang
+- Gorm
+- Gin
 
 ### Minha maior dificuldade
 <!-- coloque aqui sua maior dificuldade e como você fez para solucionar ela ou peça ajudar para o leitor em relação a sua dificuldade, também mencione o artigo ou usuário que te ajudou a resolver  -->
