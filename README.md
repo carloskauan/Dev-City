@@ -77,6 +77,7 @@ uma comunidade simples mas poderosa para devs interagir!
 ~~~
 Este metodo registra os dados do usuario no banco e retorna esses dados
 > Requer o JSON com os dados
+> 
 Esta etapa contem um validador de email e caso seja passado um email invalido a operação de cadastro e cancelada e e temos o seguinte retorno
 ~~~json
 {
