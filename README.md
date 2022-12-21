@@ -92,6 +92,7 @@ Esta etapa contem um validador de email e caso seja passado um email invalido a 
 Este metodo retorna todos os usarios registrados no banco
 
 ### /user/"email"
+#### Get
 ~~~
 get("/user/"email")
 ~~~
