@@ -82,3 +82,24 @@ Este metodo registra os dados do usuario no banco e retorna esses dados
 "/api/user"
 ~~~
 Este metodo retorna todos os usarios registrados no banco
+
+### /user/"email"/"senha"
+### Get
+Este metodo deve ser chamado quando uma autenticação de usuario for necessario. O metodo retorna um status com um booleano
+Exmeplo:
+~~~
+get("/user/jão12345@gmail.com/12345678")
+~~~
+Caso as credenciais estjam certas e retornado
+~~~json
+{
+    "status": true
+}
+~~~
+Caso as credenciais estejam erradas ou o usuario não exista e retornado
+~~~json
+{
+    "error":"User not found",
+    "status": false
+}
+~~~
