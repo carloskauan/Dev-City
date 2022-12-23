@@ -14,5 +14,7 @@ func HandlerFunc(){
   app.POST("/user", controllers.RegisterUser)
   app.GET("/user/:email/:password", controllers.Authenticate)
 
+  app.GET("/test", controllers.Test)
+
   app.Run()
 }
