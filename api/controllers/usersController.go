@@ -6,6 +6,7 @@ import(
   "net/mail"
   "DevCity/api/database"
   "DevCity/api/models"
+  "DevCity/api/middleware"
   "github.com/gin-gonic/gin"
   "golang.org/x/crypto/bcrypt"
 )
@@ -13,7 +14,6 @@ import(
 var user models.User
 
 func RegisterUser(c *gin.Context){
-
   // Puxando dados do usuario da requisição
   if err := c.ShouldBindJSON(&user); err != nil{
     c.JSON(http.StatusBadRequest, gin.H{
@@ -62,7 +62,6 @@ func Authenticate(c *gin.Context){
   var userAuth models.User
   email := c.Param("email")
   password := c.Param("password")
-
   //Encontrando usuario por email
   database.DB.Where(&models.User{Email: email}).First(&userAuth)
   if userAuth.ID == 0 {
@@ -72,7 +71,6 @@ func Authenticate(c *gin.Context){
     })
     return
   }
-
   //Comparando senha do banco e senha informada
   err := bcrypt.CompareHashAndPassword([]byte(userAuth.Password), []byte(password))
   if err != nil{
@@ -82,9 +80,17 @@ func Authenticate(c *gin.Context){
     })
     return
   }
-
   // Resposta caso autenticação bata
   c.JSON(http.StatusOK, gin.H{
     "status":true,
   })
+}
+
+func Test(c *gin.Context){
+  err := middleware.SendWhitGomail("Ola victorrrrrrrrrrrr")
+  if err != nil{
+    c.JSON(http.StatusBadRequest, gin.H{"erro":err})
+    return
+  }
+  c.JSON(http.StatusOK, gin.H{"msg":"Email sended"})
 }
