@@ -129,3 +129,9 @@ E em caso de senha erra temos
     "status":false
 }
 ~~~
+
+### /user/verify/"email"
+#### Post
+O metodo requer um email na qual sera gerado um pin de 6 numeros e enviado para o email informado e tbm sera salvo o pin no servidor . O pin sera guardado criptografado juntamente com o email.
+
+Esse metodo retorna dois estados. Um erro ou um aviso de sucesso de envio
