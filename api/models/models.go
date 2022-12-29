@@ -9,3 +9,9 @@ type User struct{
   Password string `json:"password"`
   Bio string `json:"bio"`
 }
+
+type Codes struct{
+  gorm.Model
+  EmailUser string `json:"emailuser"`
+  Code string `json:"code"`
+}

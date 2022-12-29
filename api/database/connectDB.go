@@ -19,4 +19,5 @@ func ConnectDB(){
     log.Panic("Erro ao se connectar com o banco ",err)
   }
   DB.AutoMigrate(&models.User{})
+  DB.AutoMigrate(&models.Codes{})
 }
