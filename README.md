@@ -135,3 +135,31 @@ E em caso de senha erra temos
 O metodo requer um email na qual sera gerado um pin de 6 numeros e enviado para o email informado e tbm sera salvo o pin no servidor . O pin sera guardado criptografado juntamente com o email.
 
 Esse metodo retorna dois estados. Um erro ou um aviso de sucesso de envio
+### /user/verify/"email"/"codigo"
+O metodo requer o email do usuario e o codigo enviado para seu email e retornara o seguinte json
+
+EX:
+~~~json
+{
+  "equal":false,
+  "status":"Codigo informado diferente do gerado",
+  "ID":codeRegister.ID,
+ }
+~~~
+Equal sera se o estado da verificação, false para diferente e true para igual
+Status sera uma descrição do que aconteceu
+ID sera o id do codigo no banco para ser utilizado no ending point post("/user/verify/"id")
+
+### /user/verify/"id"
+#### Delete
+Este metodo requer o id do codigo de verificação para deleter o codigo do banco e retorna o seguinte json
+
+EX:
+~~~json
+{
+  "status":"Codigo de verificação do banco apagado com sucesso",
+  "deleted":true,
+}
+~~~
+Status e uma descrição do ocorrido
+Deleted armazenará o stato da deleção, true pra deletado com sucesso e false para erro na deleção
