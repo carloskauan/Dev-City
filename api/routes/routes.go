@@ -13,8 +13,10 @@ func HandlerFunc(){
   app.GET("/user/:email", controllers.SearchUserByEmail)
   app.POST("/user", controllers.RegisterUser)
   app.GET("/user/:email/:password", controllers.Authenticate)
-
-  app.GET("/test", controllers.Test)
+  // Verify
+  app.POST("/user/verify/:email", controllers.SendCodeEmailAndSave)
+  app.GET("/user/verify/:email/:code", controllers.ComapareCode)
+  app.DELETE("/user/verify/:id", controllers.DeleteCode)
 
   app.Run()
 }
