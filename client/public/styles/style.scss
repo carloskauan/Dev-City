@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+// font-family: 'Quicksand', sans-serif;
+    // 500 == medium
+    // 600 == semi-bold
+    // 700 == bold              
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+// font-family: 'Open-sans', sans-serif;
+    // 300 = light
+    // 400 regular
+    // 500 == medium
+    // 600 == semi-bold
+
+/* ====== VARIÁVEIS ====== */
+    // CORES
+        $cor-primaria-forte: #4E148C;
+        $cor-primaria-escura_forte: #4F0B7B;
+        $cor-primaria-escura: #741AB0;
+        $cor-primaria-clara: #803FC6;
+
+        $cor-preta-forte: #1C1C1C;
+        $cor-preta-escuro: #262626;
+        $cor-preta-claro: #303030;
+
+        $cor-branca: #fff;
+
+    // TIPOGRAFIA
+
+        // headings
+
+            h1 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 700;
+                font-size: 3.9rem;
+            }
+
+            h2 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 600;
+                font-size: 3.4rem;
+            }
+
+            h3 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 600;
+                font-size: 3rem;
+            }
+
+            h4 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 2.8rem;
+            }
+
+            h5 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 2.4rem;
+            }
+
+            h6 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+
+        // body
+
+            p, body {
+                font-family: 'Open-sans', sans-serif;
+                font-weight: 500;
+                font-size: 1.9rem;
+            }
+
+            .body-small {
+                font-size: 1.6rem;
+            }
+            
+            .body-large {
+                font: 2.2rem;
+            }
+
+        // caption
+
+            span, .caption {
+                font-family: 'Open-sans', sans-serif;
+                font-weight: 500;
+                font-size: 1.7rem;
+            }
+
+            .caption-small {
+                font-size: 1.4rem;
+            }
+
+            .caption-large {
+                font-size: 2rem;
+            }
+
+        // button
+
+            button {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 1.9rem;
+            }
+
+            .button-small {
+                font-size: 1.6rem;
+            }
+
+            .button-large {
+                font-size: 2.2rem;
+            }
+
+        // link
+
+            a {
+                font-family: 'Open-sans', sans-serif;
+                font-weight: 400;
+                font-size: 2rem;
+            }
+
+            .link-small {
+                font-size: 1.7rem;
+            }
+
+            .link-large {
+                font-size: 2.3rem;
+            }
+
+        // label
+
+            label {
+                font-family: 'Open-sans', sans-serif;
+                font-weight: 300;
+                font-size: 1.6rem;
+            }
+
+            .label-small {
+                font-size: 1.3rem;
+            }
+
+            .label-large {
+                font-size: 1.9rem;
+            }
+
+/* ====== Animações ====== */
+
+@keyframes cimaLabel {
+    from {
+        transform: translateY(3rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ====== BODY/HTML/ROOT ====== */
+
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: $cor-preta-escuro;
+}
+
+/* ====== HEADER ====== */
+
+header {
+    background-color: $cor-preta-forte;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    a {
+        margin: 0 1rem;
+        color: $cor-primaria-clara;
+        transition: 1s all;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 80%;
+        }
+    }
+
+    h1 {
+        color: $cor-primaria-clara;
+    }
+
+    &.center {
+        padding: 1rem 30rem;
+    }
+}
+
+/* ====== MAIN ====== */
+
+main {
+    padding: 0 1rem;
+
+    &.center {
+        padding: 0rem 30rem;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .signin, .signup {
+            background-color: #1c1c1cb9;
+            box-shadow: 0px 0px 1rem #fff;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            width: 44rem;
+            margin: auto;
+            margin-top: 5rem;
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+    
+            div.groupInputs {
+                width: 100%;
+                margin: 2rem 0rem;
+    
+                
+                .groupInput {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 1rem 0;
+                    width: 100%;
+    
+                    label {
+                        animation: 'cimaLabel' 0.2s linear;
+                    }
+                    
+                    input {
+                        padding: 1rem;
+                        background-color: #1C1C1C;
+                        color: #fff;
+    
+                        margin-top: 0.5rem;
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid $cor-primaria-escura_forte;
+                    }
+                }
+            }
+    
+            button {
+                transition: 1s all;
+                width: 28rem;
+                padding: 1rem;
+                border-radius: 1.5rem;
+                margin-bottom: 4rem;
+                color: #fff;
+                background-color: $cor-primaria-escura;
+    
+                &:hover {
+                    opacity: 90%;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        button.mudarForm {
+            background-color: $cor-preta-forte;
+            padding: 1rem;
+            width: 44rem;
+            color: #fff;
+            border-radius: 1.5rem;
+            margin-top: 2rem;
+        }
+    }
+
+
+}
+
+/* ====== FOOTER ====== */
+
+footer {
+
+}

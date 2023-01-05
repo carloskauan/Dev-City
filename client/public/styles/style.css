@@ -1,0 +1,235 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+/* ====== VARIÁVEIS ====== */
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 3.9rem;
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+h4 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2.8rem;
+}
+
+h5 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+h6 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+p, body {
+  font-family: "Open-sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+}
+
+.body-small {
+  font-size: 1.6rem;
+}
+
+.body-large {
+  font: 2.2rem;
+}
+
+span, .caption {
+  font-family: "Open-sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.caption-small {
+  font-size: 1.4rem;
+}
+
+.caption-large {
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+}
+
+.button-small {
+  font-size: 1.6rem;
+}
+
+.button-large {
+  font-size: 2.2rem;
+}
+
+a {
+  font-family: "Open-sans", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.link-small {
+  font-size: 1.7rem;
+}
+
+.link-large {
+  font-size: 2.3rem;
+}
+
+label {
+  font-family: "Open-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.label-small {
+  font-size: 1.3rem;
+}
+
+.label-large {
+  font-size: 1.9rem;
+}
+
+/* ====== Animações ====== */
+@-webkit-keyframes cimaLabel {
+  from {
+    transform: translateY(3rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes cimaLabel {
+  from {
+    transform: translateY(3rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* ====== BODY/HTML/ROOT ====== */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #262626;
+}
+
+/* ====== HEADER ====== */
+header {
+  background-color: #1C1C1C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header a {
+  margin: 0 1rem;
+  color: #803FC6;
+  transition: 1s all;
+}
+header a:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+header h1 {
+  color: #803FC6;
+}
+header.center {
+  padding: 1rem 30rem;
+}
+
+/* ====== MAIN ====== */
+main {
+  padding: 0 1rem;
+}
+main.center {
+  padding: 0rem 30rem;
+}
+main .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .form .signin, main .form .signup {
+  background-color: rgba(28, 28, 28, 0.7254901961);
+  box-shadow: 0px 0px 1rem #fff;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 44rem;
+  margin: auto;
+  margin-top: 5rem;
+}
+main .form .signin h1, main .form .signup h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+main .form .signin div.groupInputs, main .form .signup div.groupInputs {
+  width: 100%;
+  margin: 2rem 0rem;
+}
+main .form .signin div.groupInputs .groupInput, main .form .signup div.groupInputs .groupInput {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  width: 100%;
+}
+main .form .signin div.groupInputs .groupInput label, main .form .signup div.groupInputs .groupInput label {
+  -webkit-animation: "cimaLabel" 0.2s linear;
+          animation: "cimaLabel" 0.2s linear;
+}
+main .form .signin div.groupInputs .groupInput input, main .form .signup div.groupInputs .groupInput input {
+  padding: 1rem;
+  background-color: #1C1C1C;
+  color: #fff;
+  margin-top: 0.5rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #4F0B7B;
+}
+main .form .signin button, main .form .signup button {
+  transition: 1s all;
+  width: 28rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin-bottom: 4rem;
+  color: #fff;
+  background-color: #741AB0;
+}
+main .form .signin button:hover, main .form .signup button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+main .form button.mudarForm {
+  background-color: #1C1C1C;
+  padding: 1rem;
+  width: 44rem;
+  color: #fff;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ====== FOOTER ====== *//*# sourceMappingURL=style.css.map */
